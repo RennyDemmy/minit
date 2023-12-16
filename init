@@ -1,0 +1,75 @@
+class LinuxInitSystem:
+    """
+    Class to represent a Linux init system.
+
+    Attributes:
+    - name: str
+        The name of the init system.
+    - version: str
+        The version of the init system.
+    """
+
+    def __init__(self, name: str, version: str):
+        """
+        Constructor to instantiate the LinuxInitSystem class.
+
+        Parameters:
+        - name: str
+            The name of the init system.
+        - version: str
+            The version of the init system.
+        """
+
+        self.name = name
+        self.version = version
+
+    def start(self):
+        """
+        Method to start the init system.
+
+        Returns:
+        - str:
+            A message indicating that the init system has started.
+        """
+
+        return f"{self.name} init system has started."
+
+    def stop(self):
+        """
+        Method to stop the init system.
+
+        Returns:
+        - str:
+            A message indicating that the init system has stopped.
+        """
+
+        return f"{self.name} init system has stopped."
+
+    def restart(self):
+        """
+        Method to restart the init system.
+
+        Returns:
+        - str:
+            A message indicating that the init system has restarted.
+        """
+
+        return f"{self.name} init system has restarted."
+
+
+# Example usage of the LinuxInitSystem class:
+
+# Creating an instance of the LinuxInitSystem class
+init_system = LinuxInitSystem("systemd", "v245")
+
+# Starting the init system
+start_message = init_system.start()
+print(start_message)
+
+# Stopping the init system
+stop_message = init_system.stop()
+print(stop_message)
+
+# Restarting the init system
+restart_message = init_system.restart()
+print(restart_message)
